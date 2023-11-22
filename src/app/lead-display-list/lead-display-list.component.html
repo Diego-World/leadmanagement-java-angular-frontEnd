@@ -1,0 +1,14 @@
+<div *ngIf="leads">
+    <h2>Lead List</h2>
+    <ul>
+      <li *ngFor="let lead of leads">
+        <div class="lead-card">
+          <p>Name: {{ lead.name }}</p>
+          <p>Cell Number: {{ lead.cellNumber }}</p>
+          <p>Email: {{ lead.email }}</p>
+          <p>Age: {{ lead.age }}</p>
+          <p>Annual Income: {{ lead.annualIncome | currency }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
