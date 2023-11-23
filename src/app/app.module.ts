@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LeadDisplayListComponent } from './lead-display-list/lead-display-list.component';
+import { PageBackgroundComponent } from './page-background/page-background.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LeadDisplayListComponent
+    LeadDisplayListComponent,
+    PageBackgroundComponent
   ],
   imports: [
     BrowserModule,

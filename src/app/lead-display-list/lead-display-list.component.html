@@ -1,4 +1,5 @@
-<div *ngIf="leads">
+<div class="container">
+  <div *ngIf="leads">
     <h2>Lead List</h2>
     <ul>
       <li *ngFor="let lead of leads">
@@ -7,8 +8,9 @@
           <p>Cell Number: {{ lead.cellNumber }}</p>
           <p>Email: {{ lead.email }}</p>
           <p>Age: {{ lead.age }}</p>
-          <p>Annual Income: {{ lead.annualIncome | currency }}</p>
+          <p>Annual Income: {{ lead.annualIncome | currency:'USD':true }}</p>
         </div>
       </li>
     </ul>
   </div>
+</div>

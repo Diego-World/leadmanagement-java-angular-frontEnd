@@ -1,0 +1,11 @@
+/* page-background.component.css */
+
+.background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0d0046; /* Set your desired background color */
+    z-index: -1; /* Place the background behind other elements */
+  }
