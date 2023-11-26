@@ -3,7 +3,7 @@
     <h2>Lead List</h2>
     <ul>
       <li *ngFor="let lead of leads">
-        <div class="lead-card">
+        <div class="lead-card" [ngClass]="getCardColor(lead.annualIncome)">
           <p>Name: {{ lead.name }}</p>
           <p>Cell Number: {{ lead.cellNumber }}</p>
           <p>Email: {{ lead.email }}</p>

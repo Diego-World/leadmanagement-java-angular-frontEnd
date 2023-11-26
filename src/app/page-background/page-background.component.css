@@ -6,6 +6,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #000000; /* Set your desired background color */
+    background-color: #ffffff; /* Set your desired background color */
     z-index: -1; /* Place the background behind other elements */
   }

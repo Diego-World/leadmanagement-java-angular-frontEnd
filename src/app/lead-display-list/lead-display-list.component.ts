@@ -21,4 +21,15 @@ export class LeadDisplayListComponent {
     this.http.get<any[]>('http://localhost:8080/lead')
       .subscribe(leads => this.leads = leads);
   }
+
+  getCardColor(income: number): string {
+    if (income >= 0 && income <= 15000) {
+      return 'red-card';
+    } else if (income > 15000 && income <= 30000) {
+      return 'blue-card';
+    } else {
+      return 'gold-card';
+    }
+  }
+
 }

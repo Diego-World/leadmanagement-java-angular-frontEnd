@@ -1,0 +1,28 @@
+<div class="add-lead-container">
+    <h2>Add New Lead</h2>
+    <form (ngSubmit)="submitForm()" #leadForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="newLead.name" required>
+      </div>
+      <div class="form-group">
+        <label for="cellNumber">Cell Number:</label>
+        <input type="text" id="cellNumber" name="cellNumber" [(ngModel)]="newLead.cellNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="newLead.email" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" [(ngModel)]="newLead.age" required>
+      </div>
+      <div class="form-group">
+        <label for="annualIncome">Annual Income:</label>
+        <input type="number" id="annualIncome" name="annualIncome" [(ngModel)]="newLead.annualIncome" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="!leadForm.valid">Add Lead</button>
+      </div>
+    </form>
+  </div>

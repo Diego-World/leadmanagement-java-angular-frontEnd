@@ -1,19 +1,12 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
 
 .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content:flex-end; /* or justify-content: space-between; */
+  flex-direction: row;
+  align-items: flex-start;
   padding: 20px;
-  height: 100%;
-}
-
-.container-inner {
-  max-width: 800px;
-  width: 100%;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
 }
 
 ul {
@@ -57,7 +50,7 @@ li {
 }
 
 h2 {
-  color: #ddd;
+  color: #000000;
   text-align: center;
 }
 
@@ -72,6 +65,19 @@ h2 {
   font-size: 18px;
   color: #555;
 }
+
+.red-card {
+  background-color: #ff6666; /* Adjust the color as needed */
+}
+
+.blue-card {
+  background-color: #6666ff; /* Adjust the color as needed */
+}
+
+.gold-card {
+  background-color: #ffd700; /* Adjust the color as needed */
+}
+
 
 @media screen and (max-width: 600px) {
   .lead-card {
