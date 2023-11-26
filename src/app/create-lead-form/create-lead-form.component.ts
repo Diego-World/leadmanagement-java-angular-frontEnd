@@ -14,7 +14,7 @@ export class CreateLeadFormComponent {
 
   submitForm() {
     // Assuming your Spring Boot API endpoint for adding a new lead is /api/leads
-    this.http.post('/api/leads', this.newLead).subscribe(
+    this.http.post('http://localhost:8080/lead', this.newLead).subscribe(
       (response) => {
         console.log('Lead added successfully', response);
         // Optionally, you can reset the form or perform other actions
