@@ -1,25 +1,34 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { LeadService } from 'src/app/services/lead.service';
 import { Lead } from 'src/app/model/Lead';
-import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-lead-display-list',
   templateUrl: './lead-display-list.component.html',
   styleUrls: ['./lead-display-list.component.css']
 })
-export class LeadDisplayListComponent {
+export class LeadDisplayListComponent implements OnInit, OnDestroy {
   leads: Lead[] = [];
+  private leadsSubscription!: Subscription;
 
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) { }
+  constructor(private leadService: LeadService) {}
 
   ngOnInit() {
-    this.fetchLeads();
+    this.fetchLeads(); // Trigger the initial fetch when the component is created
+
+    // Subscribe to future updates
+    this.leadsSubscription = this.leadService.getLeadsObservable().subscribe((leads) => {
+      this.leads = leads;
+    });
+  }
+
+  ngOnDestroy() {
+    this.leadsSubscription.unsubscribe();
   }
 
   fetchLeads() {
-    this.http.get<any[]>('http://localhost:8080/lead')
-      .subscribe(leads => this.leads = leads);
+    this.leadService.notifyLeadsUpdated(); // Trigger the initial fetch
   }
 
   getCardColor(income: number): string {
@@ -31,5 +40,4 @@ export class LeadDisplayListComponent {
       return 'gold-card';
     }
   }
-
 }

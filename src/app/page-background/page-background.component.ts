@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-background',
-  template: '<div class="background"></div>',
+  templateUrl: './page-background.component.html',
   styleUrls: ['./page-background.component.css']
 })
-export class PageBackgroundComponent implements OnInit {
+export class PageBackgroundComponent{
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  image = 'assets/images/background.jpg';
 }

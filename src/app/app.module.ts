@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LeadDisplayListComponent } from './lead-display-list/lead-display-list.component';
 import { PageBackgroundComponent } from './page-background/page-background.component';
 import { CreateLeadFormComponent } from './create-lead-form/create-lead-form.component';
+import { LeadService } from './services/lead.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { CreateLeadFormComponent } from './create-lead-form/create-lead-form.com
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LeadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
