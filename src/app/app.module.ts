@@ -15,7 +15,7 @@ import { LeadService } from './services/lead.service';
     AppComponent,
     LeadDisplayListComponent,
     PageBackgroundComponent,
-    CreateLeadFormComponent
+    CreateLeadFormComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-page-background',
@@ -9,5 +9,5 @@ export class PageBackgroundComponent{
 
   constructor() { }
 
-  image = 'assets/images/background.jpg';
+  image = 'assets/images/User-Icon-Blue-background.png';
 }
